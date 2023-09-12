@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+.header{
+   min-height: 100vh;
+   width: 100%;
+   background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../IMG/main.jpg);
+   background-position: center;
+   background-size: cover;
+   position: relative; 
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list{
+    flex: 1;
+    text-align: right;
+   
+}
+.nav-list ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-list ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: wavy;
+    font-size: 15px;
+    
+} 
+.nav-list ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(189, 50, 96);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-list ul li:hover::after{
+     width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fdfcff;
+    position: absolute;
+    top:50%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h4{
+    top: 45%;
+    left: 15%;
+    font-size: 25px;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+}
+.text-box hr{
+    position: absolute;
+    top:95%;
+    left: 40%;
+    width: 20%;
+    color: #e9e9e9;
+}
+.text-box .mus{
+    position: absolute;
+    left: 47%;
+    color: #fff;
+    font-size: 23px;
+    line-height: 57px;
+}
+.font{
+    color: rgb(189, 50, 96);
+}
+.wrapper{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 65%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 40px;
+    border: 1px solid #d4cfde;
+    backdrop-filter: blur(10px);
+}
+.formwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+.wrapper.active .formwrapper.login{
+    transform: scale(0) translate(-300px, 500px);
+}
+.wrapper .formwrapper.register{
+    position: absolute;
+    top: 0;
+    transform: scale(0) translate(200px, -500px);
+}
+.wrapper.active .formwrapper.register{
+    transform: scale(1) translate(0,0);
+}
+h2{
+    font-size: 2em;
+    color: #fdfcff;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    margin: 30px 0;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+   top: -5px; 
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+.remember-forget{
+    margin: -5px 0 15px 5px;
+
+}
+.remember-forget label{
+    color: #fff;
+    font-size: 14px;
+}
+.remember-forget label input{
+   accent-color: rgb(189, 50, 96);
+}
+.remember-forget a{
+    color: #fff;
+    text-decoration: none;
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid rgb(189, 50, 96);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
+.register-link{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin: 15px 0;
+}
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}
+.specify{  
+    text-align: center;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(202, 204, 206, 0.7),rgba(121, 126, 147, 0.7)),url(../IMG/AC_音符15イラスト.jpg);
+}
+.specify  h1{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+}
+.spec-col{
+    flex-basis: 80%;
+    background: transparent;
+    border-radius: 3px;
+    margin-bottom: 5%;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: space-between;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.spec-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.about-us{
+    text-align: center;
+    background-color: #d4cfde;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.aboutcol{
+    flex-basis: 48%;
+    padding: 80px 2px;
+}
+.aboutcol h1{
+    width: 90%;
+    color: #7155ab;
+    position: absolute;
+    font-size: 25px;
+    top:25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.ion{
+    color: crimson;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #d4cfde;
+}
+.footer h1{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    
+}
